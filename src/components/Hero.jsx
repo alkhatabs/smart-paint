@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 const Hero = () => {
   const [hover, setHover] = useState(false)
+  const heroBackgroundImage = `${import.meta.env.BASE_URL}images/warranty_smart_quality_painting.jpg`
 
   return (
     <section id="home" className="section hero">
@@ -35,7 +36,14 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className="hero-bg fade-up" style={{ marginTop: '3rem', padding: '3rem 2rem' }}>
+      <div
+        className="hero-bg fade-up"
+        style={{
+          marginTop: '3rem',
+          padding: '3rem 2rem',
+          backgroundImage: `url(${heroBackgroundImage})`
+        }}
+      >
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
           <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', marginBottom: '1rem' }}>
             Inspired by Omani Nature, Enhanced by Technology

@@ -162,7 +162,6 @@ label { display: flex; flex-direction: column; gap: .4rem; font-size: .82rem; fo
 /* ── Custom styles for Smart Paint ── */
 .hero-bg {
   position: relative;
-  background-image: url('./images/warranty_smart_quality_painting.jpg');
   background-size: cover;
   background-position: center;
   border-radius: var(--radius-lg);
