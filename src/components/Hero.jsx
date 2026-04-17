@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
   const [hover, setHover] = useState(false)
+  const navigate = useNavigate()
   const heroBackgroundImage = `${import.meta.env.BASE_URL}images/warranty_smart_quality_painting.jpg`
 
   return (
@@ -24,13 +26,13 @@ const Hero = () => {
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           style={{ transform: hover ? 'translateY(-2px)' : 'none' }}
-          onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => navigate('/products')}
         >
           Explore Products
         </button>
         <button 
           className="btn btn-ghost"
-          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => navigate('/contact')}
         >
           Contact Us
         </button>

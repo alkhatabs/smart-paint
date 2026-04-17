@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const SocialIcon = ({ name }) => {
   if (name === 'Instagram') {
     return (
@@ -55,22 +57,22 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Products</h4>
           <ul>
-            <li><a href="#products">Interior Paint</a></li>
-            <li><a href="#products">Exterior Paint</a></li>
-            <li><a href="#products">Natural Paint</a></li>
-            <li><a href="#products">Anti-Mosquito Paint</a></li>
-            <li><a href="#products">Commercial Paint</a></li>
+            <li><Link to="/products">Interior Paint</Link></li>
+            <li><Link to="/products">Exterior Paint</Link></li>
+            <li><Link to="/products">Natural Paint</Link></li>
+            <li><Link to="/products">Anti-Mosquito Paint</Link></li>
+            <li><Link to="/products">Commercial Paint</Link></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Get Quote</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/contact">Get Quote</Link></li>
           </ul>
         </div>
 

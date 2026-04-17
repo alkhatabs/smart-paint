@@ -78,7 +78,7 @@ const Products = () => {
           Our Products
         </h2>
         <p style={{ color: 'var(--text-muted)', maxWidth: '800px', margin: '0 auto' }}>
-          Discover our range of smart paint solutions that combine beauty, protection, and innovation.
+          Eco Frankincense paint for insect protection
         </p>
       </div>
 

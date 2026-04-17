@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
-  const [activeLink, setActiveLink] = useState('home')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -11,14 +13,24 @@ const Navbar = () => {
     { id: 'contact', label: 'Contact' },
   ]
 
-  const scrollToSection = (sectionId) => {
-    setActiveLink(sectionId)
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+  const navigateToSection = (sectionId) => {
+    const pathBySection = {
+      home: '/',
+      about: '/about',
+      products: '/products',
+      contact: '/contact',
     }
+    navigate(pathBySection[sectionId] || '/')
     setMobileMenuOpen(false)
   }
+
+  const activeLinkByPath = {
+    '/': 'home',
+    '/about': 'about',
+    '/products': 'products',
+    '/contact': 'contact',
+  }
+  const activeLink = activeLinkByPath[location.pathname] || 'home'
 
   return (
     <nav className="navbar">
@@ -31,7 +43,7 @@ const Navbar = () => {
           <a
             key={item.id}
             className={`nav-link ${activeLink === item.id ? 'active' : ''}`}
-            onClick={() => scrollToSection(item.id)}
+            onClick={() => navigateToSection(item.id)}
           >
             {item.label}
           </a>
@@ -40,7 +52,7 @@ const Navbar = () => {
 
       <button 
         className="btn btn-ghost"
-        onClick={() => scrollToSection('contact')}
+        onClick={() => navigateToSection('contact')}
         style={{ fontSize: '0.85rem' }}
       >
         Get Quote
@@ -73,7 +85,7 @@ const Navbar = () => {
             <a
               key={item.id}
               className={`nav-link ${activeLink === item.id ? 'active' : ''}`}
-              onClick={() => scrollToSection(item.id)}
+              onClick={() => navigateToSection(item.id)}
               style={{ padding: '0.5rem 0' }}
             >
               {item.label}
