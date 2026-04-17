@@ -91,6 +91,7 @@ const Contact = () => {
     { name: 'Instagram', handle: '@smartpaint_om' },
     { name: 'Snapchat', handle: '@smartpaint_om' }
   ]
+  const quickContactItems = ['WhatsApp', 'Email', 'Fax']
 
   return (
     <section id="contact" className="section contact-section">
@@ -99,8 +100,9 @@ const Contact = () => {
           Contact Us
         </h2>
         <p className="contact-subtitle">
-          We are happy to communicate with you at any time. Our team is ready to answer your 
-          inquiries and provide assistance with full attention.
+          We are happy to hear from you anytime 💫
+          <br />
+          Our team is ready to answer your inquiries and assist you with care.
         </p>
       </div>
 
@@ -108,6 +110,24 @@ const Contact = () => {
         {/* Contact Form */}
         <div className="card contact-card-main">
           <h3 className="contact-card-title">Send Us a Message</h3>
+
+          <h4 className="contact-subsection-title">Contact Us</h4>
+          <div className="contact-social-list" style={{ marginBottom: '1rem' }}>
+            {quickContactItems.map((item) => (
+              <div key={item} className="card contact-social-card">
+                <div>
+                  <div className="contact-social-name">{item}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="contact-hours-wrap" style={{ marginBottom: '1rem' }}>
+            <div className="contact-hours-row">
+              <div className="contact-hours-day">📍 Location</div>
+              <div className="contact-hours-time">Sultanate of Oman – Muscat</div>
+            </div>
+          </div>
 
           <h4 className="contact-subsection-title">Follow Us</h4>
           <div className="contact-social-list" style={{ marginBottom: '1rem' }}>
@@ -122,10 +142,25 @@ const Contact = () => {
                 </span>
                 <div>
                   <div className="contact-social-name">{social.name}</div>
-                  <div className="contact-social-handle">{social.handle}</div>
+                  <div className="contact-social-handle">{social.name}: {social.handle}</div>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="contact-hours-wrap" style={{ marginBottom: '1rem' }}>
+            <div className="contact-hours-row">
+              <div className="contact-hours-day">🕐 Working Hours</div>
+              <div className="contact-hours-time"></div>
+            </div>
+            <div className="contact-hours-row">
+              <div className="contact-hours-day">Sunday to Thursday</div>
+              <div className="contact-hours-time">9 AM – 6 PM</div>
+            </div>
+            <div className="contact-hours-row">
+              <div className="contact-hours-day">Friday & Saturday</div>
+              <div className="contact-hours-time"></div>
+            </div>
           </div>
           
           {submitSuccess && (
@@ -251,37 +286,13 @@ const Contact = () => {
               We typically respond within 24 hours
             </div>
           </form>
+
+          <p style={{ marginTop: '1rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+            Your comfort matters to us, and we are always happy to serve you 🤍
+          </p>
         </div>
       </div>
 
-      <div className="fade-up delay-2" style={{ marginTop: '3rem', textAlign: 'center' }}>
-        <div className="card" style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <h3 style={{ marginBottom: '1rem' }}>Why Contact Us?</h3>
-          <div className="grid grid-3" style={{ marginTop: '1.5rem' }}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🎯</div>
-              <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>Free Consultation</div>
-              <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                Get expert advice on the best solution for your needs
-              </div>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>📋</div>
-              <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>Custom Quote</div>
-              <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                Receive a personalized quote based on your project
-              </div>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🛠️</div>
-              <div style={{ fontWeight: '600', marginBottom: '0.5rem' }}>Technical Support</div>
-              <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                Get help with application, maintenance, and troubleshooting
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   )
 }

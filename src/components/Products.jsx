@@ -7,7 +7,7 @@ const Products = () => {
     {
       id: 1,
       name: "Interior Paint",
-      description: "Innovative paint that provides effective protection from insects inside the home, with a safe formulation free from strong odors.",
+      description: "An innovative paint that provides effective protection against insects inside the home, with a safe, low-odor formula enriched with Omani frankincense extract to create a clean and comfortable atmosphere. Ideal for bedrooms and living rooms.",
       features: [
         "Enhanced with Omani frankincense extract",
         "Safe for bedrooms and living rooms",
@@ -20,7 +20,7 @@ const Products = () => {
     {
       id: 2,
       name: "Exterior Paint",
-      description: "Weather-resistant paint for the Gulf climate, protects your home walls from insects and heat with long-lasting durability.",
+      description: "A weather-resistant paint designed for Gulf conditions, protecting your home’s walls from insects and heat with long-lasting durability. Enhanced with natural Omani frankincense properties for added effectiveness.",
       features: [
         "Resistant to Gulf climate conditions",
         "Protects from insects and heat",
@@ -33,7 +33,7 @@ const Products = () => {
     {
       id: 3,
       name: "Natural Paint",
-      description: "Plant-based formulation with natural oils inspired by the Omani environment, incorporating Omani frankincense.",
+      description: "A plant-based formula made with natural oils inspired by the Omani environment. Includes Omani frankincense to help repel insects in a safe and eco-friendly way. Suitable for families and children.",
       features: [
         "100% plant-based formulation",
         "Safe for families and children",
@@ -46,7 +46,7 @@ const Products = () => {
     {
       id: 4,
       name: "Anti-Mosquito Paint",
-      description: "Perfect solution to get rid of mosquitoes, contains effective components from Omani frankincense.",
+      description: "An ideal solution to eliminate mosquitoes. Contains active ingredients from Omani frankincense, providing comfort and peaceful sleep without disturbance, with a gentle natural touch.",
       features: [
         "Effective mosquito protection",
         "Provides peaceful sleep",
@@ -59,7 +59,7 @@ const Products = () => {
     {
       id: 5,
       name: "Commercial Paint",
-      description: "Designed for restaurants and warehouses, provides strong protection that lasts for long periods.",
+      description: "Designed for restaurants and warehouses, offering strong and long-lasting protection in environments with high insect exposure. Enriched with a professional formula that includes Omani frankincense to enhance efficiency and performance.",
       features: [
         "Strong protection for commercial spaces",
         "Long-lasting in high-exposure environments",

@@ -10,12 +10,11 @@ const Hero = () => {
       </div>
       
       <h1 className="fade-up delay-1">
-        Protect Your Home <span style={{ color: 'var(--accent)' }}>Intelligently</span>
+        Smart Paint
       </h1>
       
       <p className="fade-up delay-2">
-        We are a specialized brand in developing smart paint that combines beauty and protection, 
-        providing you with an elegant and clean environment free from insects.
+        Protect your home intelligently
       </p>
       
       <div className="fade-up delay-3" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
